@@ -1,0 +1,37 @@
+<%= render 'layouts/errors', :object => @member %>
+
+<div class="form">
+  <%= form_for @member do |f| %>
+  <div class="name">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="email">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="married">
+    <%= f.label :married %>
+    <%= f.check_box :married %>
+  </div>
+  <div class="social_media">
+    <%= f.label :social_media %>
+    <%= f.text_field :social_media %>
+  </div>
+  <div class="date_of_birth">
+    <%= f.label :date_of_birth %>
+    <%= f.text_field :date_of_birth, :placeholder => 'dd/mm/yyyy' %>
+  </div>
+  <div class="place_of_birth">
+    <%= f.label :place_of_birth %>
+    <%= f.text_field :place_of_birth %>
+  </div>
+  <div class="location">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="button">
+    <%= f.submit %>
+  </div>
+  <% end %>
+</div>

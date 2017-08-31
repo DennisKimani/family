@@ -1,0 +1,17 @@
+<p style="font-size: 30px; font: bold;"><%= @member.name %></p>
+
+<ul>
+  <li> <strong>Email :-</strong> <%= @member.email %></li><br>
+  <li> <strong>Social Media</strong> <%= @member.social_media %></li><br>
+  <li> <strong>Married</strong> <%= @member.married %></li><br>
+  <li> <strong>Date of Birth</strong> <%= @member.date_of_birth %></li><br>
+  <li> <strong>Place of Birth</strong> <%= @member.place_of_birth %></li><br>
+  <li> <strong>Location</strong> <%= @member.location %></li>
+</ul>
+
+<br>
+<p><%= link_to "Edit", edit_member_path(@member) %></p>
+<p><%= link_to "Delete", member_path(@member),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+<p><%= link_to "Return to members", members_path %></p>
