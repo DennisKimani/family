@@ -1,0 +1,8 @@
+<h2><%= @clan.name %></h2>
+
+<hr>
+<p><%= link_to "Edit", edit_clan_path(@clan) %></p>
+<p><%= link_to "Delete", clan_path(@clan),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+<p><%= link_to "Return to clans", clans_path %></p>

@@ -1,0 +1,9 @@
+<%= render 'layouts/errors', :object => @clan %>
+
+<%= form_for @clan do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :quote %>
+<%= f.text_field :quote %>
+<%= f.submit %>
+<% end %>
