@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- ul {
+ .nav {
      list-style-type: none;
      margin: 0;
      padding: 0;
@@ -22,11 +22,11 @@
      background-color: #007BFF;
  }
 
- li {
+ .li {
      float: left;
  }
 
- li a {
+ .li a {
      display: block;
      color: white;
      text-align: center;
@@ -34,10 +34,10 @@
      text-decoration: none;
  }
 
- li a:hover:not(.active) {
-     background-color: blue;
+ .li a:hover:not(.active) {
+     background-color: white;
  }
 
- li a.active {
+ .li a.active {
      color: white;
  }
