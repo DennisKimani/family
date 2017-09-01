@@ -9,10 +9,10 @@
 <hr>
 
 <% if @clan.members.any? %>
-<ul>
+<ul style="text-decoration: none;">
   <% @clan.members.each do |member| %>
-  <li>
-    <%= link_to member.name, member_path(member) %><br>
+  <li style="text-decoration: none;">
+    <%= link_to member.name, clan_member_path(@clan, member) %><br>
     <%= link_to "Edit", edit_clan_member_path(@clan, member) %>
     |
     <%= link_to "Delete", clan_member_path(@clan, member),
