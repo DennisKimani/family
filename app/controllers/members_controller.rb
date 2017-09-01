@@ -9,14 +9,15 @@ class MembersController < ApplicationController
   end
 
   def new
-    @member = Member.new
-    render :new
+    @clan = Clan.find(params[:clan_id])
+    @member = @clan.members.new
   end
 
   def create
-    @member = Member.new(member_params)
+    @clan = Clan.find(params[:clan_id])
+    @member = @clan.members.new(member_params)
     if @member.save
-      redirect_to members_path
+      redirect_to clan_path(@member.clan)
     else
       render :new
     end
