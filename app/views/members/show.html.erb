@@ -1,5 +1,9 @@
 <p style="font-size: 30px; font: bold;"><%= @member.name %></p>
 
+<div class="image">
+  <%= image_tag @member.image_url.to_s %>
+</div>
+
 <ul>
   <li> <strong>Email :-</strong> <%= @member.email %></li><br>
   <li> <strong>Social Media</strong> <%= @member.social_media %></li><br>
