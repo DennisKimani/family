@@ -8,6 +8,9 @@ class CreateMembers < ActiveRecord::Migration[5.1]
       t.column :place_of_birth, :string
       t.column :email, :string
       t.column :location, :string
+      t.column :clan_id, :integer
+
+      t.timestamps
     end
   end
 end

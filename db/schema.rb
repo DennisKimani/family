@@ -28,6 +28,9 @@ ActiveRecord::Schema.define(version: 20170831123328) do
     t.string "place_of_birth"
     t.string "email"
     t.string "location"
+    t.integer "clan_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

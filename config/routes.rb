@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :clans
-  resources :members
   root :to => 'homes#index'
+  resources :clans do
+    resources :members
+  end
 end
