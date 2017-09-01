@@ -1,4 +1,6 @@
 class Member   < ActiveRecord::Base
+  belongs_to :clan
+
   validates :name, :presence => true
   validates :married, :presence => true
   validates :social_media, :presence => true
