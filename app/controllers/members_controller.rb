@@ -4,7 +4,8 @@ class MembersController < ApplicationController
     render :index
   end
   def show
-    @member = Member.find(params[:id])
+    @clan = Clan.find(params[:clan_id])
+    @member = @clan.members.find(params[:id])
     render :show
   end
 
