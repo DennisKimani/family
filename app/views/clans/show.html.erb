@@ -1,8 +1,28 @@
-<h2><%= @clan.name %></h2>
+<h2>Welcome to
+  <%= @clan.name %>
+  family tree.</h2>
+<p><%= link_to "Edit", edit_clan_path(@clan) %>|
+  <%= link_to "Delete", clan_path(@clan),
+                           :data => {:confirm => "You sure?",
+                                     :method => "delete"} %>|
+  <%= link_to "Add a member", new_clan_member_path(@clan) %></p>
+<hr>
+
+<% if @clan.members.any? %>
+<ul>
+  <% @clan.members.each do |member| %>
+  <li>
+    <%= link_to member.name, member_path(member) %><br>
+    <%= link_to "Edit", edit_clan_member_path(@clan, member) %>
+    |
+    <%= link_to "Delete", clan_member_path(@clan, member),
+                         :data => {:confirm => "Are you sure?",
+                                        :method => "delete"} %>
+  </li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no members yet!</p>
+<% end %>
 
 <hr>
-<p><%= link_to "Edit", edit_clan_path(@clan) %></p>
-<p><%= link_to "Delete", clan_path(@clan),
-                         :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
-<p><%= link_to "Return to clans", clans_path %></p>

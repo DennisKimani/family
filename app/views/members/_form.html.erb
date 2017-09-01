@@ -1,7 +1,7 @@
 <%= render 'layouts/errors', :object => @member %>
 
 <div class="form">
-  <%= form_for @member do |f| %>
+  <%= form_for [@clan, @member] do |f| %>
   <div class="name">
     <%= f.label :name %>
     <%= f.text_field :name %>
