@@ -2,7 +2,7 @@
 
 <ul>
   <% @clans.each do |clan| %>
-    <li><strong><%= link_to clan.name, clan_path(clan) %>:-</strong><%= clan.quote %></li>
+    <li style="font-size: 20px"><strong><%= link_to clan.name, clan_path(clan) %> :- </strong>  <%= clan.quote %></li>
   <% end %>
 </ul>
 
