@@ -1,12 +1,12 @@
-<p style="font-size: 30px; font: bold;"><%= @member.name %></p>
+<p style="font-size: 40px; font: bold;"><%= @member.name %></p>
 
-<div class="image">
-  <%= image_tag @member.image_url.to_s %>
+<div class="container">
+  <img style="width= 50px; height= 100px;"class="img-rounded" <%= image_tag @member.image_url.to_s %>
 </div>
-
+<br>
 <ul>
   <li> <strong>Email :-</strong> <%= @member.email %></li><br>
-  <li> <strong>Social Media</strong> <%= @member.social_media %></li><br>
+  <li> <strong>Social Link</strong> <%= @member.social_media %></li><br>
   <li> <strong>Married</strong> <%= @member.married %></li><br>
   <li> <strong>Date of Birth</strong> <%= @member.date_of_birth %></li><br>
   <li> <strong>Place of Birth</strong> <%= @member.place_of_birth %></li><br>
