@@ -14,25 +14,9 @@
   </head>
 
   <body>
-    <nav class="blue">
-      <div class="nav-wrapper">
-        <ul class="nav">
-          <li class="li">
-            <a class="active" href="/"><%= image_tag "https://cdn3.iconfinder.com/data/icons/family-outline/61/25_-Family-_family_home_people-32.png" %></a>
-          </li>
-          <li class="li">
-            <a href="/clans">Clans</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <%= render 'shared/navbar'%>
     <%= yield %>
+    <%= render 'shared/footer'%>
     <hr>
-    <footer>
-      <p>Created by: Dennis Kimani.</p>
-      <p>Contact information:
-        <a href="mailto:dennisngugi.dk@.com.com">
-          dennisngugi.dk@.com</a>.</p>
-    </footer>
   </body>
 </html>
