@@ -1,40 +1,87 @@
 <%= render 'layouts/errors', :object => @member %>
 
-<div class="form">
+<div class="form  column">
   <%= form_for [@clan, @member] do |f| %>
-  <div class="name">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="col-md-6">
+    <div class="name">
+      <%= f.label :name %>
+      <br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="mother">
+      <%= f.label :mother %>
+      <br>
+      <%= f.text_field :mother %>
+    </div>
+    <div class="father">
+      <%= f.label :father %>
+      <br>
+      <%= f.text_field :father %>
+    </div>
+    <div class="sibling">
+      <%= f.label :sibling %>
+      <br>
+      <%= f.text_field :sibling %>
+    </div>
+    <div class="married_to">
+      <%= f.label :married_to %>
+      <br>
+      <%= f.text_field :married_to %>
+    </div>
+    <div class="children">
+      <%= f.label :children %>
+      <br>
+      <%= f.text_field :children %>
+    </div>
+    <div class="context">
+      <%= f.label :Background %>
+      <br>
+      <%= f.text_area :context, value: '##HOW WOULD YOU DESCRIBE YOURSELF?', rows: '15', cols: '60'%>
+      <br>
+    </div>
   </div>
-  <div class="email">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="married">
-    <%= f.label :married %>
-    <%= f.check_box :married %>
-  </div>
-  <div class="social_media">
-    <%= f.label :social_media %>
-    <%= f.text_field :social_media %>
-  </div>
-  <div class="date_of_birth">
-    <%= f.label :date_of_birth %>
-    <%= f.text_field :date_of_birth, :placeholder => 'dd/mm/yyyy' %>
-  </div>
-  <div class="place_of_birth">
-    <%= f.label :place_of_birth %>
-    <%= f.text_field :place_of_birth %>
-  </div>
-  <div class="location">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-  <div class="image">
-    <%= f.file_field :image %>
-  </div>
-  <div class="button">
-    <%= f.submit %>
+  <div class="col-md-6">
+    <div class="social_media">
+      <%= f.label :social_media %>
+      <br>
+      <%= f.text_field :social_media %>
+    </div>
+    <div class="date_of_birth">
+      <%= f.label :date_of_birth %>
+      <br>
+      <%= f.text_field :date_of_birth, :placeholder => 'dd/mm/yyyy' %>
+    </div>
+    <div class="place_of_birth">
+      <%= f.label :place_of_birth %>
+      <br>
+      <%= f.text_field :place_of_birth %>
+    </div>
+    <div class="job">
+      <%= f.label :job %>
+      <br>
+      <%= f.text_field :job %>
+    </div>
+    <div class="email">
+      <%= f.label :email %>
+      <br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="telephone">
+      <%= f.label :telephone %>
+      <br>
+      <%= f.text_field :telephone %>
+    </div>
+    <div class="location">
+      <%= f.label :location %>
+      <br>
+      <%= f.text_field :location %>
+    </div>
+    <div class="image">
+      <%= f.file_field :image %>
+    </div>
+    <div class="button">
+      <%= f.submit %>
+    </div>
   </div>
   <% end %>
 </div>

@@ -5,6 +5,8 @@ class CreateMembers < ActiveRecord::Migration[5.1]
       t.column :mother, :string
       t.column :father, :string
       t.column :sibling, :string
+      t.column :married_to, :string
+      t.column :children, :string
       t.column :social_media, :string
       t.column :date_of_birth, :datetime
       t.column :place_of_birth, :string

@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20170901054643) do
     t.string "mother"
     t.string "father"
     t.string "sibling"
+    t.string "married_to"
+    t.string "children"
     t.string "social_media"
     t.datetime "date_of_birth"
     t.string "place_of_birth"
