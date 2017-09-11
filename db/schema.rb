@@ -22,10 +22,15 @@ ActiveRecord::Schema.define(version: 20170901054643) do
 
   create_table "members", force: :cascade do |t|
     t.string "name"
-    t.boolean "married"
+    t.string "mother"
+    t.string "father"
+    t.string "sibling"
     t.string "social_media"
     t.datetime "date_of_birth"
     t.string "place_of_birth"
+    t.string "job"
+    t.string "context"
+    t.integer "telephone"
     t.string "email"
     t.string "location"
     t.integer "clan_id"
